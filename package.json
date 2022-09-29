@@ -1,0 +1,28 @@
+{
+  "name": "strict_scheduler",
+  "version": "1.0.0",
+  "description": "Simple strict scheduler with control over your device peripheral and process",
+  "main": "index.js",
+  "author": "Abijuru Seth",
+  "license": "MIT",
+  "nodemonConfig": {
+    "ignore": [
+      "*.json",
+      "**/docs/**"
+    ]
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "concurrently": "^7.4.0",
+    "console-log-colors": "^0.2.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "http-server": "^14.1.1",
+    "node-cron": "^3.0.2"
+  },
+  "scripts": {
+    "dev": "concurrently \"nodemon index.js\" \"http-server -a 127.0.0.1 -p 4201 --cors\"",
+    "start": "node index.js",
+    "serve": "http-server -a 127.0.0.1 -p 4201 --cors"
+  }
+}
